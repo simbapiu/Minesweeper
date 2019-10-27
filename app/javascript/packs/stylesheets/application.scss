@@ -1,0 +1,112 @@
+%mine-flag-properties {
+  display: block;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+  text-indent: -100px;
+}
+
+body {
+  #root {
+    .App {
+      .container {
+        .logo {
+          width: 300px;
+          margin: auto;
+        }
+
+        .jumbotron {
+
+          h1 {
+            text-align: center;
+          }
+
+          .instructions {
+            text-align: center;
+            margin-top: 30px;
+
+            p {
+              font-size: 18px;
+            }
+          }
+
+          .game-table {
+            width: 400px;
+            margin: auto;
+            background-color: lightgrey;
+            border: solid 1px;
+
+            .game-cells {
+              border: solid 1px;
+              width: 40px;
+              height: 40px;
+              padding: 2px;
+
+              .game-cell-opened {
+                text-align: center;
+                font-weight: bold;
+
+                .game-cell-number-0 {
+                  color: lightgray;
+                }
+
+                .game-cell-number-1 {
+                  color: blue;
+                }
+
+                .game-cell-number-2 {
+                  color: darkgreen;
+                }
+
+                .game-cell-number-3 {
+                  color: red;
+                }
+
+                .game-cell-number-4 {
+                  color: darkblue;
+                }
+
+                .game-cell-number-5 {
+                  color: darkred;
+                }
+
+                .game-cell-number-6 {
+                  color: lightseagreen;
+                }
+
+                .game-cell-number-7 {
+                  color: dodgerblue;
+                }
+
+                .game-cell-number-8 {
+                  color: orangered;
+                }
+
+                .game-cell-mine {
+                  background: url("../images/mine.png") no-repeat center;
+                  @extend %mine-flag-properties;
+                }
+              }
+
+              .game-cell-closed {
+                width: 35px;
+                height: 35px;
+                background-color: #999999;
+              }
+
+              .game-cell-flag {
+                background: url("../images/flag.png") no-repeat center;
+                @extend %mine-flag-properties;
+              }
+            }
+
+            .game-rows {
+              border: solid 1px;
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
