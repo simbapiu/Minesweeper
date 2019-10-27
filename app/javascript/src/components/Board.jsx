@@ -13,9 +13,7 @@ class Board extends Component {
 
   handleRestart(e) {
     e.preventDefault();
-    console.log(localStorage);
     localStorage.clear();
-    console.log(localStorage);
     this.props.restartGame();
   }
 

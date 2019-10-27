@@ -13,19 +13,6 @@ const store = createStore(
   applyMiddleware(thunk)
 );
 
-/*const size = 10;
-
-function setMines() {
-  const mineLocationArray = [];
-  for(let mine = 0; mine < size; mine++) {
-    mineLocationArray.push(`${ Math.floor(Math.random() * 10)}, ${ Math.floor(Math.random() * 10)}`)
-  }
-
-  return mineLocationArray;
-}
-
- */
-
 const initAction = {
   type: NEW_GAME,
   size: 10
